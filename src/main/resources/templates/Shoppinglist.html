@@ -11,6 +11,7 @@ charset=UTF-8" />
 		<tr th:each="listItem:${list}">
 			<td th:text="${listItem.id}" />
 			<td th:text="${listItem.itemName}" />
+			<td th:text="${listItem.amount}" />
 			<td> <a th:href="@{/delete/{id}(id=${listItem.id})}" class="btn btn-danger">Delete</a></td>
 		</tr>
 	</table>
