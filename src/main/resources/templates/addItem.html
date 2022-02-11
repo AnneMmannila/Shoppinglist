@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Server Programming</title>
+<meta http-equiv="Content-Type" content="text/html;
+charset=UTF-8" />
+</head>
+<body>
+	<h1>Add a Item</h1>
+
+	<div>
+		<form th:object="${item}" th:action="@{save}" action="#" method="post">
+			<label for="itemName">Item:</label><br> 
+			<input type="text" id="itemName" th:field="*{itemName}"><br> 
+			<label for="amount">Amount:</label><br> 
+			<input type="text" id="amount" th:field="*{amount}"><br> 
+			<input type="submit" value="Save"></input>
+		</form>
+	</div>
+	<a href="/" >Cancel</a>
+</body>
+</html>

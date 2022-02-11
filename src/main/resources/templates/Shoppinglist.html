@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Shoppinglist for Linux course</title>
+<meta http-equiv="Content-Type" content="text/html;
+charset=UTF-8" />
+</head>
+<body>
+	<h1>I am Shoppinglist</h1>
+	<table>
+		<tr th:each="listItem:${list}">
+			<td th:text="${listItem.id}" />
+			<td th:text="${listItem.itemName}" />
+			<td> <a th:href="@{/delete/{id}(id=${listItem.id})}" class="btn btn-danger">Delete</a></td>
+		</tr>
+	</table>
+	<button><a href="/add" />Add new item to list</button>
+</body>
+</html>
+
